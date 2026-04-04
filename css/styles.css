@@ -574,7 +574,13 @@ body.dark .info-box {
 }
 
 /* RESPONSIVE NAVBAR */
+/* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr auto;
+    padding: 0.8rem 1rem;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -593,6 +599,10 @@ body.dark .info-box {
 
   .hamburger {
     display: block;
+  }
+
+  .nav-acciones {
+    display: none; /* Oculta la luna en móvil, ya que el hamburger la reemplaza */
   }
 }
 
