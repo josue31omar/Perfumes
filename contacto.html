@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Perfumes Lara </title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+ <nav class="navbar">
+    <div class="logo">
+  <span class="logo-nombre">Perfumes Lara</span>
+  <div class="logo-linea">
+    <span class="logo-linea-decorativa"></span>
+    <span class="logo-subtitulo">Lo mejor para ti</span>
+    <span class="logo-linea-decorativa"></span>
+  </div>
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-acciones">
+      <button class="btn-dark" id="btn-dark">🌙</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <section class="page-header">
+    <h1>Contáctanos</h1>
+    <p>Estamos aquí para ayudarte</p>
+  </section>
+
+  <!-- CONTENIDO CONTACTO -->
+  <section class="contacto-contenido">
+
+    <!-- FORMULARIO -->
+    <div class="formulario-box">
+      <h2>Envíanos un mensaje</h2>
+
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="tucorreo@email.com">
+      </div>
+
+      <div class="campo">
+        <label for="asunto">Asunto</label>
+        <select id="asunto">
+          <option value="">Selecciona un asunto</option>
+          <option value="pedido">Consulta sobre pedido</option>
+          <option value="producto">Información de producto</option>
+          <option value="envio">Envíos y entregas</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+
+      <button class="btn-enviar" id="btn-enviar">Enviar mensaje</button>
+
+      <!-- Mensaje de confirmación -->
+      <div class="mensaje-exito" id="mensaje-exito">
+        ✅ ¡Mensaje enviado con éxito! Te contactaremos pronto.
+      </div>
+
+    </div>
+
+    <!-- INFORMACIÓN DE CONTACTO -->
+    <div class="info-box">
+
+      <div class="info-item">
+        <span class="info-icono">📍</span>
+        <div>
+          <h4>Dirección</h4>
+          <p>Bo. El Centro, dos cuadras al oeste de plaza Agua Blanca</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icono">📞</span>
+        <div>
+          <h4>Teléfono</h4>
+          <p>+504 9301-7653</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icono">📧</span>
+        <div>
+          <h4>Correo</h4>
+          <p>info@perfumeslara.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icono">🕐</span>
+        <div>
+          <h4>Horario</h4>
+          <p>Lunes a Sábado: 8am - 7pm</p>
+        </div>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="redes">
+        <h4>Síguenos</h4>
+        <div class="redes-iconos">
+          <a href="#">📘 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/+50493017653" target="_blank" class="whatsapp-flotante">
+    💬
+  </a>
+
+  <script src="js/main.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenido">
+
+      <div class="footer-col">
+        <h3> Perfumes Lara </h3>
+        <p>Fragancias exclusivas para cada momento especial de tu vida.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+       <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>📍 El Progreso, Yoro, Honduras</p>
+        <p>📞 +504 9301-7653</p>
+        <p>📧 info@perfumeslara.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <div class="footer-redes">
+          <a href="#">📘 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Perfumes Lara. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

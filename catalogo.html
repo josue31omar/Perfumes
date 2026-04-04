@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Perfumes Lara</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="logo">
+  <span class="logo-nombre">Perfumes Lara</span>
+  <div class="logo-linea">
+    <span class="logo-linea-decorativa"></span>
+    <span class="logo-subtitulo">Lo mejor para ti</span>
+    <span class="logo-linea-decorativa"></span>
+  </div>
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-acciones">
+      <button class="btn-dark" id="btn-dark">🌙</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <section class="page-header">
+    <h1>Nuestro Catálogo</h1>
+    <p>El lujo de oler diferente, el placer de ser único.</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="filtros">
+    <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+    <button class="filtro-btn" data-filtro="mujer">Mujer</button>
+    <button class="filtro-btn" data-filtro="hombre">Hombre</button>
+    <button class="filtro-btn" data-filtro="unisex">Unisex</button>
+  </section>
+
+  <!-- BUSCADOR -->
+  <section class="buscador">
+    <input type="text" id="buscador-input" placeholder="🔍 Buscar perfume...">
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="productos">
+
+    <div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/Narciso Rodriguez For Her EDP rosa.jpg" alt="Narciso Rodriguez For Her">
+     <h3>Narciso Rodriguez For Her 100ml</h3>
+  <p>Fragancia floral almizclada con notas de rosa, ámbar y pachulí. Sensual, elegante y duradera.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,800.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+    <div class="card" data-categoria="mujer" data-agotado="false">
+      <img src="img/Narciso Rodriguez For Her Musc Noir Rose EDP.webp" alt="Narciso Rodriguez For Her Musc Noir Rose EDP">
+      <h3>Narciso Rodriguez For Her Musc Noir Rose EDP 100ml</h3>
+      <p>Fragancia ámbar floral con notas de bergamota, ciruela, almizcle y vainilla oriental. Sensual e íntima.</p>
+      <span class="categoria">Mujer</span>
+      <span class="precio">L. 3,680.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+
+    <div class="card" data-categoria="mujer" data-agotado="false">
+      <img src="img/Coco Chanel Mademoiselle.webp" alt="Coco Chanel Mademoiselle 100 ml ">
+      <h3>Coco Chanel Mademoiselle 100 ml</h3>
+      <p>Fragancia ámbar floral con notas de naranja, bergamota, rosa turca y pachulí. Elegante y atemporal.</p>
+      <span class="categoria">Mujer</span>
+      <span class="precio">L. 5,900.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+
+   <div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/Chance Chanel.jpg" alt="Chanel Chance EDP 100ml">
+  <h3>Chance Chanel EDP 100ml</h3>
+  <p>Fragancia floral especiada con notas de pimienta rosa, jazmín, pachulí y vainilla. Elegante e imprevisible.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 4,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/gucci bloom roja 100ml.webp" alt="Gucci Bloom EDP">
+  <h3>Gucci Bloom EDP 100ml</h3>
+  <p>Fragancia floral con notas de jazmín, nardos y Camilla de Rangoon. Auténtica, femenina e inolvidable.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 4,390.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/gucci flora morada 100ml.jpg" alt="Gucci Flora Gorgeous Magnolia EDP">
+  <h3>Gucci Flora Gorgeous Magnolia EDP 100ml</h3>
+  <p>Fragancia chipre floral con notas de zarzamora, coco, magnolia, jazmín sambac, ylang-ylang y pachulí. Sofisticada y femenina.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 4,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/lady millon 80ml.webp" alt="Paco Rabanne Lady Million">
+  <h3>Lady Million Paco Rabanne 80ml</h3>
+  <p>Una fragancia deslumbrante y excesiva que encarna el lujo. Presenta una mezcla vibrante de neroli y naranja amarga con un corazón floral de jazmín y azahar, culminando en un fondo irresistible de miel y pachulí. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+    <div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/Sauvage eau parfum.webp" alt="Dior Sauvage EDP 100 ml">
+  <h3>Dior Sauvage EDP 100ml</h3>
+  <p>Fragancia oriental con notas de bergamota, lavanda, pimienta de Sichuan y vainilla. Poderoso e irresistible.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 4,450.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/blue chanel 100ml.webp" alt="Bleu de Chanel">
+  <h3>Bleu de Chanel 100ml</h3>
+  <p>Un tributo a la libertad masculina expresado en una fragancia aromática y amaderada con una estela cautivadora. Combina el frescor de los cítricos con la energía de un acorde aromático y el soplo seco de notas de cedro.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 4,800.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+   <div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/k by dolce gabbana.jpg" alt="K by Dolce & Gabbana EDP 100ml">
+  <h3>K by Dolce & Gabbana EDP 100ml</h3>
+  <p>Fragancia amaderada especiada con notas de limón siciliano, cardamomo, lavanda y cedro. Carismática y poderosa.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 3,400.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/dolce gabbana the one.webp" alt="Dolce & Gabbana The One for Men 50ml">
+  <h3>Dolce & Gabbana The One for Men 50</h3>
+  <p>Fragancia amaderada especiada con notas de pomelo, jengibre, cardamomo, ámbar y tabaco. Seductora e irresistible.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,400.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/Dolce gabbana Pour Home 200ml.jpg" alt="Dolce & Gabbana Pour Homme 200ml">
+  <h3>Dolce & Gabbana Pour Homme 200ml</h3>
+  <p>Fragancia aromática fougère con notas de bergamota, neroli, lavanda, pimienta y tabaco. Elegante y varonil.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 3,200.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/dolce gabbana pour home 125ml.jpg" alt="Dolce & Gabbana Pour Homme 125ml">
+  <h3>Dolce & Gabbana Pour Homme 125ml</h3>
+  <p>Fragancia aromática fougère con notas de bergamota, neroli, lavanda, pimienta y tabaco. Elegante y varonil.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/hugo man 125ml.jpg" alt="Hugo Boss Hugo Man EDT">
+  <h3>Hugo Boss Hugo Man EDT 125ml</h3>
+  <p>Fragancia aromática verde con notas de manzana verde, menta, salvia y bálsamo de abeto. Fresca y audaz.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,550.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/The scent boss.webp" alt="Hugo Boss The Scent EDT">
+  <h3>Hugo Boss The Scent EDT 100ml</h3>
+  <p>Fragancia aromática especiada con notas de jengibre, bergamota, fruta maninka y cuero. Seductora e irresistible.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/good girl 90ml.webp" alt="Carolina Herrera Good Girl">
+  <h3>Good Girl Carolina Herrera 90ml</h3>
+  <p>Una fragancia sofisticada que celebra los contrastes de la mujer moderna, combina notas dulces de jazmín y nardo con el toque profundo del haba tonka y el cacao. Un perfume icónico, sensual y elegante.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/tresor 100ml.webp" alt="Lancôme Trésor EDP">
+  <h3>Lancôme Trésor EDP 100ml</h3>
+  <p>Fragancia oriental floral con notas de durazno, rosa, jazmín, vainilla y sándalo. Romántica y atemporal.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/idole now 100ml.jpg" alt="Lancôme Idôle Now">
+  <h3>Idôle Now Lancôme 100ml</h3>
+  <p>Una fragancia floral vibrante que fusiona la rosa icónica con un acorde de orquídea de Malasia y una vainilla de Madagascar enriquecida. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,500.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set musc noir narciso rodriguez.webp" alt="Set Narciso Rodriguez Musc Noir">
+  <h3>Set Narciso Rodriguez For Her Musc Noir</h3>
+  <p>Un set exclusivo que celebra la sensualidad femenina. Explora el lado más oscuro del almizcle, combinado con notas de gamuza, ciruela y heliotropo. Una fragancia profunda, adictiva y puramente elegante.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 4,500.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set famme paco rabbanne.jpg" alt="Set Paco Rabanne Fame">
+  <h3>Set Paco Rabanne Fame</h3>
+  <p>Un set de lujo que captura el irresistible espíritu parisino de la mujer Paco Rabanne. Esta fragancia vanguardista combina el mango extremadamente jugoso con la pureza del jazmín y un incienso cremoso y sensual. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,450.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/coach floral.webp" alt="Coach Floral EDP">
+  <h3>Coach Floral EDP 90ml</h3>
+  <p>Fragancia floral amaderada con notas de piña, pimienta rosa, gardenia, jazmín sambac y sándalo. Fresca y femenina.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,650.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/Q dolce gabbana.webp" alt="Dolce & Gabbana Q EDP" data-agotado="false">
+  <h3>Dolce & Gabbana Q EDP 50ml</h3>
+  <p>Fragancia frutal aromática con notas de limón siciliano, cereza, heliotropo y cedro. Refinada y audaz.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,650.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/euphoria 100ml.jpg" alt="Calvin Klein Euphoria EDP 100ml">
+  <h3>Calvin Klein Euphoria EDP 100ml</h3>
+  <p>Fragancia oriental floral con notas de granada, orquídea negra, flor de loto, ámbar y caoba. Misteriosa y seductora.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,200.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/euphoria 50ml.jpg" alt="Calvin Klein Euphoria EDP 50ml">
+  <h3>Calvin Klein Euphoria EDP 50ml</h3>
+  <p>Fragancia oriental floral con notas de granada, orquídea negra, flor de loto, ámbar y caoba. Misteriosa y seductora.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/good fortune 50ml.jpg" alt="Viktor & Rolf Good Fortune Elixir EDP">
+  <h3>Viktor & Rolf Good Fortune Elixir EDP 50ml</h3>
+  <p>Fragancia ámbar floral con notas de incienso, jazmín, vainilla Bourbon, palo santo y sándalo. Mística y seductora.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/good fortune 90.jpg" alt="Viktor & Rolf Good Fortune Elixir EDP">
+  <h3>Viktor & Rolf Good Fortune Elixir EDP 90ml</h3>
+  <p>Fragancia ámbar floral con notas de incienso, jazmín, vainilla Bourbon, palo santo y sándalo. Mística y seductora.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/versa bright crystal 30ml.avif" alt="Versace Bright Crystal">
+  <h3>Versace Bright Crystal 30ml</h3>
+  <p>Una fragancia joya inspirada en una mezcla de los aromas florales favoritos de Donatella Versace. Destaca por sus notas refrescantes de granada y yuzu, seguidas por un corazón radiante de loto y magnolia.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 890.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/blossom coach 30ml.webp" alt="Coach Floral Blush">
+  <h3>Coach Floral Blush 30ml</h3>
+  <p>Una fragancia inspirada en el optimismo y el espíritu libre. Se abre con notas audaces de bayas de Goji, que se mezclan con un corazón floral de peonías y un fondo aterciopelado de madera blanca. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 750.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/set eternity for men.jpg" alt="Set Calvin Klein Eternity for Men">
+  <h3>Set Eternity for Men Calvin Klein</h3>
+  <p>Un set clásico que rinde homenaje al hombre contemporáneo, familiar y sensible. Esta fragancia es un ícono de la familia aromática fougère, destacando por sus notas refrescantes de lavanda, mandarina y bergamota.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/jimmy choo 30ml.webp" alt="Jimmy Choo Urban Hero 30ml">
+  <h3>Jimmy Choo Urban Hero EDP 30ml</h3>
+  <p>Fragancia amaderada especiada con notas de caviar de limón, pimienta negra, vetiver y ámbar gris. Sofisticada y urbana.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 740.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/tommi girl 100ml.webp" alt="Tommy Girl EDT">
+  <h3>Tommy Girl EDT 100ml</h3>
+  <p>Fragancia floral frutal con notas de manzano en flor, mandarina, rosa, madreselva y sándalo. Fresca y juvenil.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/light blue dolce gabbana 50ml.webp" alt="Dolce & Gabbana Light Blue EDT Mujer">
+  <h3>Dolce & Gabbana Light Blue EDT 50ml</h3>
+  <p>Fragancia floral frutal con notas de limón siciliano, manzana, bambú, jazmín y cedro. Fresca y mediterránea.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,500.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/polo negra 100ml.jpg" alt="Ralph Lauren Polo Black">
+  <h3>Polo Black Ralph Lauren 125ml</h3>
+  <p>Una fragancia moderna y urbana que define la sofisticación masculina. Se distingue por su innovadora nota de mango helado, combinada con la calidez de la salvia plateada y el pachulí negro.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set jimmy choo rosado.jpg" alt="Set Jimmy Choo Blossom">
+  <h3>Set Jimmy Choo Blossom Mujer</h3>
+  <p>Un set radiante y lleno de alegría. Esta fragancia destaca por su apertura efervescente de frutos rojos y cítricos, que se funde en un corazón de guisante de olor y rosas. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 3,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set jimmy choo dorado.webp" alt="Set Jimmy Choo I Want Choo Le Parfum">
+  <h3>Set Jimmy Choo I Want Choo Le Parfum</h3>
+  <p>Una fragancia opulenta y glamurosa diseñada para brillar. Destaca por su exquisita mezcla de jazmín dorado, gardenia y una base cálida de praliné y sándalo. Este set ofrece una experiencia olfativa rica, cremosa y de larga duración.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set jimmy choo rojo.webp" alt="Set Jimmy Choo I Want Choo">
+  <h3>Set Jimmy Choo I Want Choo</h3>
+  <p>Una fragancia explosiva y llena de glamour que combina la dulzura del jugo de melocotón y la mandarina con el toque exótico del lirio rojo y el jazmín sambac. Su fondo de vainilla y benjuí le da una calidez seductora.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,890.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/I want choo.webp" alt="Jimmy Choo I Want Choo EDP">
+  <h3>Jimmy Choo I Want Choo EDP 10ml</h3>
+  <p>Fragancia floral oriental con notas de durazno, mandarina, jazmín, lirio rojo y vainilla. Glamurosa e irresistible.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/imperiale cluc de nuit 105 ml.webp" alt="Armaf Club de Nuit Imperiale">
+  <h3>Club de Nuit Imperiale 105ml</h3>
+  <p>Una fragancia opulenta y majestuosa que redefine la elegancia femenina. Se distingue por sus notas de lichi, bergamota y nuez moscada, que se funden en un corazón de rosa turca y vainilla. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div> 
+
+<div class="card" data-categoria="unisex" data-agotado="false">
+  <img src="img/club de nuit untold.webp" alt="Armaf Club de Nuit Untold">
+  <h3>Club de Nuit Untold 105ml</h3>
+  <p>Una obra maestra de la perfumería moderna. Esta fragancia unisex cautiva con notas de azafrán y jazmín, que se entrelazan con el calor del Amberwood y el ámbar gris. Su fondo de resina de abeto y cedro crea una estela magnética, dulce y sofisticada que proyecta lujo absoluto. Una experiencia sensorial inigualable.</p>
+  <span class="categoria">Unisex</span>
+  <span class="precio">L. 1,880.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/set legend red .jpg" alt="Set Montblanc Legend Red">
+  <h3>Set Montblanc Legend Red</h3>
+  <p>Una fragancia potente y llena de energía diseñada para el hombre audaz. Su aroma abre con la frescura de la naranja de sangre y la toronja, equilibradas con un corazón aromático de salvia y cedro.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,650.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/coach sunset 60ml.avif" alt="Coach Dreams Sunset EDP">
+  <h3>Coach Dreams Sunset EDP 60ml</h3>
+  <p>Fragancia ámbar floral con notas de sorbete de pera, bergamota, jazmín sambac, magnolia y vainilla. Dulce y romántica.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/contradiction CK.webp" alt="Calvin Klein Contradiction EDP">
+  <h3>Calvin Klein Contradiction EDP 100ml</h3>
+  <p>Fragancia floral amaderada con notas de peonía, orquídea, zarzamora, jazmín y sándalo. Clásica y sofisticada.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,600.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/obsession 100ml.webp" alt="Obsession Calvin Klein Hombre">
+  <h3>Obsession Calvin Klein 100ml</h3>
+  <p>Un clásico intenso y provocativo de la familia oriental amaderada. Se distingue por sus notas potentes de ámbar, canela y especias exóticas, equilibradas con un toque de lavanda y mandarina.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,430.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/Al Haramain Since 1970 100ml.webp" alt="Al Haramain L'Aventure Since 1970">
+  <h3>Al Haramain L'Aventure 100ml</h3>
+  <p>Una fragancia magistral de Al Haramain desde 1970. Abre con notas cítricas y frescas de limón y bergamota, con un corazón amaderado y floral, cerrando con un fondo de pachulí, ámbar y almizcle.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,610.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/l aventure femme.webp" alt="Al Haramain L'Aventure Femme">
+  <h3>Al Haramain L'Aventure Femme 100ml</h3>
+  <p>Una fragancia elegante. Abre con una explosión vibrante de piña, bergamota y bayas silvestres, que se suavizan con un corazón de rosa y jazmín. Su fondo de almizcle, ámbar y sándalo.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/raction kenneth cole 100ml.avif" alt="Kenneth Cole Reaction">
+  <h3>Kenneth Cole Reaction 100ml</h3>
+  <p>Una fragancia enérgica y refrescante que destaca por su explosión de melón de agua, manzana verde y cítricos. Su fondo de almizcle y sándalo le aporta un toque masculino moderno y limpio.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/viva la juicy 150ml.avif" alt="Viva La Juicy La Fleur">
+  <h3>Viva La Juicy La Fleur 150ml</h3>
+  <p>Una interpretación luminosa y floral del clásico original. Combina la dulzura de los frutos rojos y el nenúfar con un corazón romántico de madreselva, gardenia y jazmín.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/oui juice contour 30ml.jpg" alt="Juicy Couture Oui EDP">
+  <h3>Juicy Couture Oui EDP 30ml</h3>
+  <p>Fragancia floral frutal con notas de sandía, pera, té, madreselva, jazmín, nardos y ámbar. Fresca y vibrante.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/pink friday Nicki Minaj 50ml.jpeg" alt="Nicki Minaj Pink Friday EDP">
+  <h3>Nicki Minaj Pink Friday EDP 50ml</h3>
+  <p>Fragancia floral frutal con notas de carambola, zarzamora, mandarina, flor de loto, caramelo y vainilla. Dulce y femenina.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,200.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/sweet tooth 75ml.webp" alt="Sabrina Carpenter Sweet Tooth EDP">
+  <h3>Sabrina Carpenter Sweet Tooth EDP 75ml</h3>
+  <p>Fragancia gourmand con notas de malvavisco, chocolate, jengibre, vainilla de Madagascar, leche de coco, jazmín y crema batida. Dulce e irresistible.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/sweet like candy ariana grande.webp" alt="Ariana Grande Sweet Like Candy EDP">
+  <h3>Ariana Grande Sweet Like Candy EDP 30ml</h3>
+  <p>Fragancia floral frutal gourmand con notas de zarzamora, pera, crema batida, malvavisco, jazmín y vainilla. Dulce y coqueta.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 650.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/burberry touch 100ml.jpg" alt="Burberry Touch EDP Mujer">
+  <h3>Burberry Touch EDP 100ml</h3>
+  <p>Fragancia floral frutal con notas de naranja, zarzamora, arándano, peonía, jazmín, vainilla y cedro. Elegante y sofisticada.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/acqua di paris 100ml.webp" alt="Acqua di Paris Magic Red">
+  <h3>Acqua di Paris Magic Red 100ml</h3>
+  <p>Una fragancia cautivadora y vibrante que abre con notas frutales intensas, evolucionando hacia un corazón de flores exóticas y un fondo cálido de ámbar y maderas preciosas.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/odyssey mega 100ml.webp" alt="Armaf Odyssey Mega">
+  <h3>Armaf Odyssey Mega 100ml</h3>
+  <p>Una fragancia amaderada que destaca por su frescura intensa. Con notas vibrantes de menta, jengibre y bergamota en la salida, evoluciona hacia un corazón de salvia y geranio, cerrando con un fondo a cedro y almizcle. </p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/l home lacoste 100ml.jpg" alt="L'Homme Lacoste">
+  <h3>L'Homme Lacoste 100ml</h3>
+  <p>Una fragancia que captura la esencia del estilo elegante y audaz. Se abre con una mezcla distintiva de ruibarbo, mandarina y naranja, que evoluciona hacia un corazón especiado de jengibre y pimienta negra.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,980.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/eternity for men 200ml.jpg" alt="Calvin Klein Eternity for Men 200ml">
+  <h3>Eternity for Men Calvin Klein 200ml</h3>
+  <p>La versión XL de un clásico imprescindible. Esta fragancia captura la esencia del hombre contemporáneo a través de sus notas herbáceas de lavanda y albahaca, complementadas con un fondo amaderado y persistente.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 2,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/eternity for men 100ml.jpg" alt="Calvin Klein Eternity for Men">
+  <h3>Eternity for Men Calvin Klein 100ml</h3>
+  <p>El espíritu del hombre moderno: sensible pero masculino, refinado pero fuerte. Esta fragancia destaca por su frescura verde con notas de lavanda, albahaca y jazmín, sobre una base amaderada de sándalo y vetiver.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,950.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="unisex" data-agotado="false">
+  <img src="img/kings & queens elixir 100ml.webp" alt="Kings & Queens Elixir">
+  <h3>Kings & Queens Elixir 100ml</h3>
+  <p>Una fragancia majestuosa y envolvente que destaca por su intensidad. Este elixir combina notas de salida vibrantes con un corazón de especias exóticas y un fondo profundo de maderas nobles, ámbar y vainilla. </p>
+  <span class="categoria">Unisex</span>
+  <span class="precio">L. 1,250.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/presence montblack 75ml.jpg" alt="Montblanc Presence">
+  <h3>Montblanc Presence 75ml</h3>
+  <p>Una fragancia Oriental Especiada que personifica la elegancia discreta. Se distingue por sus notas de salida de canela, jengibre y cardamomo que se funden en un corazón de manzana y heliotropo, cerrando con una base cálida de sándalo.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/extreme montblack 75 ml.avif" alt="Montblanc Starwalker Extreme">
+  <h3>Montblanc Starwalker Extreme 75ml</h3>
+  <p>Una reinterpretación más intensa y profunda del clásico Starwalker. Esta fragancia abre con notas vibrantes de mandarina, manzana y piña, que dan paso a un corazón especiado y un fondo robusto de sándalo y haba tonka.</p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/cristiano ronaldo.jpg" alt="Cristiano Ronaldo CR7">
+  <h3>Cristiano Ronaldo CR7 100ml</h3>
+  <p>Una fragancia dinámica y deportiva diseñada para el hombre que vive con pasión y energía. Este aroma combina notas vibrantes de bergamota y cardamomo con un corazón de canela y tabaco, cerrando con una base cálida de sándalo y vainilla. </p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/inviduel montblack 50ml.jpeg" alt="Montblanc Individuel">
+  <h3>Montblanc Individuel 50ml</h3>
+  <p>Una fragancia sofisticada y distintiva que destaca por su complejidad. Combina la frescura de la lavanda y el romero con un toque único de frambuesa, chocolate y vainilla sobre una base de sándalo y canela. </p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L.700.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/very sexy blanca 100ml.webp" alt="Victoria's Secret Very Sexy Oasis">
+  <h3>Victoria's Secret Very Sexy Oasis 100ml</h3>
+  <p>Un escape floral y exuberante que captura la esencia de un oasis secreto. Esta fragancia destaca por su trío de flores blancas: nardos, camelia y flor de azahar, equilibrados con un toque cítrico y un fondo cremoso.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,200.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/rose hardcore 100ml.webp" alt="Victoria's Secret Hardcore Rose">
+  <h3>Victoria's Secret Hardcore Rose 100ml</h3>
+  <p>Una fragancia floral frutal con un espíritu rebelde y atrevido. Este aroma combina la delicadeza de la rosa negra con la energía del chocolate negro y un toque refrescante de ámbar líquido.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/wicked vs 50ml.jpg" alt="Victoria's Secret Wicked">
+  <h3>Victoria's Secret Wicked 50ml</h3>
+  <p>Una fragancia cálida y adictiva que equilibra la dulzura con un toque floral. Se abre con notas brillantes de fresia, que se funden en un corazón de azúcar moreno y un fondo de vainilla de Tahití.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,310.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/fabulous 100 ml.png" alt="Victoria's Secret Fabulous">
+  <h3>Victoria's Secret Fabulous 100ml</h3>
+  <p>Una fragancia llena de estilo que celebra la feminidad moderna. Se abre con una mezcla jugosa de grosella suculenta y violeta, evolucionando hacia un corazón de flor de osmanthus y un fondo cálido de sándalo y vainilla.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,850.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/ralp lauren 2 100ml.jpeg" alt="Ralph Lauren Big Pony 2 for Women">
+  <h3>Ralph Lauren Big Pony 2 Women 100ml</h3>
+  <p>Una fragancia coqueta, alegre y llena de dulzura. Este aroma de la familia Floral Frutal destaca por su deliciosa nota de arándanos jugosos combinada con la calidez del haba tonka.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,200.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/very sexy morada 50ml.jpg" alt="Victoria's Secret Very Sexy Orchid">
+  <h3>Victoria's Secret Very Sexy Orchid 50ml</h3>
+  <p>Una fragancia opulenta y fascinante que evoca el misterio de una noche de jardín. Se define por sus notas intensas de orquídea salvaje, grosella negra y maderas profundas, complementadas con un toque de pachulí.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,330.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/bare vs 100ml.jpg" alt="Victoria's Secret Bare">
+  <h3>Victoria's Secret Bare 100ml</h3>
+  <p>Una fragancia auténtica y personal que se adapta a ti. Bare es una mezcla exclusiva de maderas suaves y mandarinas frescas, creada con una combinación de almizcles que se funden con tu piel para revelar tu aroma natural.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,400.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/bare sueded vainilla 100ml.png" alt="Victoria's Secret Bare Vanilla Suede">
+  <h3>Victoria's Secret Bare Vanilla Suede 100ml</h3>
+  <p>Una interpretación lujosa y sofisticada de la vainilla clásica. Esta fragancia envuelve los sentidos con notas de vainilla cremosa, ámbar cálido y un toque sutil de gamuza que le aporta una textura suave y aterciopelada.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,150.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/tease glam vs 50ml.jpg" alt="Victoria's Secret Tease Glam">
+  <h3>Victoria's Secret Tease Glam 50ml</h3>
+  <p>Una edición limitada llena de brillo y encanto. Tease Glam combina notas de bayas de enebro frescas, peonía fucsia y un toque delicioso de merengue de vainilla. Es una fragancia festiva, dulce y vibrante que captura una esencia glamurosa. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/bombshel roja 100ml.webp" alt="Victoria's Secret Bombshell Midnight">
+  <h3>Victoria's Secret Bombshell Midnight 100ml</h3>
+  <p>Una interpretación audaz y nocturna de la icónica Bombshell. Esta fragancia captura la magia de la medianoche con notas intensas de cereza negra, peonía nocturna y una base cálida de maderas de vainilla.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,500.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/set victoria secret.webp" alt="Set 4 Mini Perfumes Victoria's Secret">
+  <h3>Set Mini Eau de Parfum 4 pzas</h3>
+  <p>La colección definitiva de Victoria's Secret en formato de viaje. Este exclusivo set incluye cuatro de las fragancias más deseadas: 
+    <strong>Bombshell</strong> (frutal-floral), 
+    <strong>Bare</strong> (amaderado-floral), 
+    <strong>Daring</strong> (ámbar-amaderado) y 
+    <strong>Very Sexy Night</strong> (floral-oriental en botella negra). 
+    Perfecto para llevar en el bolso o como un regalo de lujo que permite explorar diferentes facetas de la feminidad.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 950.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/angel gold 50ml.jpg" alt="Victoria's Secret Angel Gold">
+  <h3>Victoria's Secret Angel Gold 50ml</h3>
+  <p>Roba el protagonismo con esta fragancia floral-frutal que destila lujo. Angel Gold combina la frescura de la bergamota con la elegancia de la gardenia y un fondo suave de almizcle.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/cristal rouge 100ml.webp" alt="Cristal Rouge">
+  <h3>Cristal Rouge 100ml</h3>
+  <p>Una fragancia deslumbrante y magnética que equilibra a la perfección el lujo y la pasión. Se abre con notas luminosas de jazmín y azafrán, que dan paso a un corazón de ámbar gris y maderas preciosas.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/yara rosada .avif" alt="Lattafa Yara Rosada">
+  <h3>Lattafa Yara 100ml</h3>
+  <p>Una fragancia dulce y encantadora que combina notas de mandarina, heliotropo y orquídea, con un corazón de notas tropicales y un fondo irresistible de vainilla, almizcle y sándalo.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/yara blanca.webp" alt="Lattafa Yara Moi Blanca">
+  <h3>Lattafa Yara Moi 100ml</h3>
+  <p>Es una fragancia sofisticada y luminosa. Se abre con notas frescas de jazmín y durazno, que se mezclan suavemente con un corazón de caramelo y ámbar. Su fondo de pachulí y sándalo le da un aire de lujo moderno.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,350.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/yara fucsia.avif" alt="Lattafa Yara Candy">
+  <h3>Lattafa Yara Candy 100ml</h3>
+  <p>La versión más intensa y dulce de la colección Yara. Una explosión frutal que combina notas de caramelos de frutas, grosella negra y mandarina, con un corazón de gardenia y un fondo de vainilla y sándalo. </p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,450.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/AnneKleinLove.webp" alt="Anne Klein Love, Anne">
+  <h3>Anne Klein Love, Anne 100ml</h3>
+  <p>Una fragancia feminina atemporal. Se abre con notas chispeantes de mandarina y bergamota, seguidas por un corazón romántico de rosa y jazmín. Su fondo cálido de vainilla y almizcle deja una estela suave, dulce y reconfortante.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,100.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="hombre" data-agotado="false">
+  <img src="img/f derrogamo 50ml.webp" alt="Salvatore Ferragamo F by Ferragamo Black">
+  <h3>F by Ferragamo Black 50ml</h3>
+  <p>Una fragancia intensa, elegante y profundamente masculina. Destaca por su salida fresca de lavanda, que se mezcla con un corazón vibrante de pimienta negra y semillas de cilantro. Su fondo de haba tonka y ládano le da un toque dulce y misterioso. </p>
+  <span class="categoria">Hombre</span>
+  <span class="precio">L. 1,150.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/kiss vs 100ml.jpg" alt="Victoria's Secret Kiss">
+  <h3>Victoria's Secret Kiss 100ml</h3>
+  <p>Una fragancia irresistiblemente dulce y floral. Con notas luminosas de pétalos de flores blancas, maderas suaves y un toque de vainilla, este aroma es fresco, femenino y perfecto para el uso diario.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 2,300.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+<div class="card" data-categoria="mujer" data-agotado="false">
+  <img src="img/moschino bubble.jpg" alt="Moschino Toy 2 Bubble Gum">
+  <h3>Moschino Toy 2 Bubble Gum 100ml</h3>
+  <p>Una fragancia vibrante, dulce y llena de energía. Abre con una nota divertida de chicle y cítricos confitados, que evoluciona hacia un corazón de flor de melocotón, jengibre y rosa de Bulgaria.</p>
+  <span class="categoria">Mujer</span>
+  <span class="precio">L. 1,250.00</span>
+  <button class="btn-agregar">Agregar al carrito</button>
+</div>
+
+
+  </section>
+
+  <!-- CARRITO FLOTANTE -->
+  <div class="carrito-flotante">
+    🛒 <span id="contador">0</span>
+      </div>
+
+ <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/50493017653" target="_blank" class="whatsapp-flotante">
+    💬
+  </a>
+
+  <!-- PANEL CARRITO -->
+  <div class="carrito-panel" id="carrito-panel">
+    <div class="carrito-header">
+      <h3>🛒 Tu Carrito</h3>
+      <button id="cerrar-carrito">✕</button>
+    </div>
+    <div class="carrito-items" id="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío</p>
+    </div>
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        <span>Total:</span>
+        <span id="carrito-total">$0.00</span>
+      </div>
+      <button class="btn-finalizar" id="btn-finalizar">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="js/"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-contenido">
+
+      <div class="footer-col">
+        <h3>Perfumes Lara</h3>
+        <p>Fragancias exclusivas para cada momento especial de tu vida.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+       <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>📍 El Progreso, Yoro, Honduras</p>
+        <p>📞 +504 9301-7653</p>
+        <p>📧 info@perfumeslara.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <div class="footer-redes">
+          <a href="#">📘 Facebook</a>
+          <a href="#">📸 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Perfumes Lara. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
