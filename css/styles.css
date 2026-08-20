@@ -27,7 +27,7 @@ body {
   padding: 1rem 2rem;
   background-color: var(--color-oscuro);
   color: white;
-<<<<<<< HEAD
+
   position: relative; /* Clave para posicionar el menú respecto a esta barra */
 }
 
@@ -35,33 +35,26 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%); /* Lo empuja exactamente al centro matemático de la barra */
-=======
+
   position: relative; 
->>>>>>> 504d00b
+
 }
 
 .logo {
   flex: 1;
   display: flex;
-<<<<<<< HEAD
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-=======
   flex-direction: column;
   justify-content: center;
->>>>>>> 504d00b
 }
 
 .nav-acciones {
   flex: 1;
   display: flex;
-<<<<<<< HEAD
+
   align-items: center;
   gap: 1rem;
-=======
   justify-content: flex-end;
->>>>>>> 504d00b
+
 }
 
 .navbar nav {
