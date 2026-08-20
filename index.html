@@ -3,54 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfumería Élite</title>
+  <title>Perfumes Lara - Inicio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- NAVEGACIÓN -->
-  <nav class="navbar">
+  <!-- NAVBAR -->
+  <header class="navbar">
     <div class="logo">
-  <span class="logo-nombre">Perfumes Lara</span>
-  <div class="logo-linea">
-    <span class="logo-linea-decorativa"></span>
-    <span class="logo-subtitulo">Lo mejor para ti</span>
-    <span class="logo-linea-decorativa"></span>
-  </div>
-</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+      <span class="logo-nombre">Perfumes Lara</span>
+      <div class="logo-linea">
+        <span class="logo-linea-decorativa"></span>
+        <span class="logo-subtitulo">Lo mejor para ti</span>
+      </div>
+    </div>
+
+    <nav>
+      <button class="hamburger" id="hamburger">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
     <div class="nav-acciones">
       <button class="btn-dark" id="btn-dark">🌙</button>
-      <button class="hamburger" id="hamburger">☰</button>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO (sección principal) -->
+
+<!-- CARRUSEL TIPO BANNER (PRIMERO PARA CAPTAR ATENCIÓN) -->
+  <section class="banner-slider">
+    <div class="slider-container" id="sliderContainer">
+      
+      <div class="slide" style="background-image: url('img/diorportada.jpg');">
+        <img src="img/diorportada.jpg" alt="Miss Dior">
+        <div class="slide-caption">Miss Dior</div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/Sauvage portada.png');">
+        <img src="img/Sauvage portada.png" alt="Sauvage">
+        <div class="slide-caption">Sauvage</div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/coco portada.jpg');">
+        <img src="img/coco portada.jpg" alt="Coco Mademoiselle">
+        <div class="slide-caption">Coco Mademoiselle</div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/blueportada.jpg');">
+        <img src="img/blueportada.jpg" alt="Bleu de Chanel">
+        <div class="slide-caption">Bleu de Chanel</div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/Portada.webp');">
+        <img src="img/Portada.webp" alt="La Vie Est Belle">
+        <div class="slide-caption">La Vie Est Belle</div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- HERO SECTION  -->
   <section class="hero">
     <h1>Descubre tu fragancia perfecta</h1>
     <p>Perfumes exclusivos para cada momento especial</p>
     <a href="catalogo.html" class="btn">Ver Catálogo</a>
   </section>
 
-    <!-- WHATSAPP FLOTANTE -->
-  <a href="https://wa.me/50493017653" target="_blank" class="whatsapp-flotante">
-    💬
-  </a>  
 
-  <script src="js/main.js"></script>
+  <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
+  <section class="page-header" style="padding: 2rem 1rem 1rem; background-color: var(--color-oscuro);">
+    <h2 style="font-size: 2.5rem; color: var(--color-dorado); text-align: center;">Fragancias Destacadas</h2>
+  </section>
+
+ <section class="productos">
+    <!-- Card 1 -->
+    <div class="card" data-categoria="mujer">
+      <img src="img/gucci flora morada 100ml.jpg" alt="Gucci Flora Gorgeous Magnolia EDP 100ml">
+      <span class="categoria">Mujer</span>
+      <h3>Gucci Flora Gorgeous Magnolia EDP 100ml</h3>
+      <p>Fragancia chipre floral con notas de zarzamora, coco, magnolia, jazmín sambac, 
+        ylang-ylang y pachulí. Sofisticada y femenina.</p>
+      <span class="precio">L. 4,350.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+
+   <!-- Card 2 -->
+    <div class="card" data-categoria="hombre">
+      <img src="img/dolce gabbana pour home 125ml.jpg" alt="Dolce & Gabbana Pour Homme 125ml">
+      <span class="categoria">Hombre</span>
+      <h3>Dolce & Gabbana Pour Homme 125ml</h3>
+      <p>Fragancia con notas de bergamota, neroli, lavanda, pimienta y tabaco. Elegante y varonil.</p>
+      <span class="precio">L. 2,600.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" data-categoria="hombre">
+      <img src="img/set eternity for men.jpg" alt=" Set Eternity for men">
+      <span class="categoria">Hombre</span>
+      <h3>Set Eternity for Men Calvin Klein</h3>
+      <p>Un set clásico que rinde homenaje al hombre contemporáneo, familiar y 
+        sensible. Esta fragancia destaca por sus notas 
+        refrescantes de lavanda, mandarina y bergamota.</p>
+      <span class="precio">L. 2,850.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" data-categoria="mujer">
+      <img src="img/Chance Chanel.jpg" alt="Chance Chanel EDP">
+      <span class="categoria">Mujer</span>
+      <h3>Chance Chanel EDP</h3>
+      <p>Fragancia floral especiada con notas de pimienta rosa, jazmín, pachulí y vainilla.</p>
+      <span class="precio">L. 4,100.00</span>
+      <button class="btn-agregar">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <!-- CARRITO FLOTANTE -->
+  <div class="carrito-flotante">
+    🛒 <span id="contador">0</span>
+  </div>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/50493017653" class="whatsapp-flotante" target="_blank">💬</a>
+
+  <!-- PANEL LATERAL DEL CARRITO -->
+  <div class="carrito-panel" id="carrito-panel">
+    <div class="carrito-header">
+      <h3>Tu Carrito</h3>
+      <button id="cerrar-carrito">✕</button>
+    </div>
+    <div class="carrito-items" id="carrito-items">
+      <p class="carrito-vacio">Tu carrito está vacío</p>
+    </div>
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        <span>Total:</span>
+        <span id="carrito-total">L. 0.00</span>
+      </div>
+      <button class="btn-finalizar" id="btn-finalizar">Finalizar por WhatsApp</button>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-contenido">
-
       <div class="footer-col">
         <h3>Perfumes Lara</h3>
         <p>Fragancias exclusivas para cada momento especial de tu vida.</p>
       </div>
-
       <div class="footer-col">
         <h3>Enlaces</h3>
         <ul>
@@ -59,27 +165,22 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h3>Contacto</h3>
         <p>📍 El Progreso, Yoro, Honduras</p>
         <p>📞 +504 9301-7653</p>
-        <p>📧 info@perfumeslara.com</p>
       </div>
-
       <div class="footer-col">
-        <h3>Síguenos</h3>
-        <div class="footer-redes">
-          <a href="#">📘 Facebook</a>
-          <a href="#">📸 Instagram</a>
-          <a href="#">🐦 Twitter</a>
-        </div>
+        <h3>Escríbenos</h3>
+        <p>¿Tienes dudas o quieres hacer un pedido?</p>
+        <p style="margin-top: 0.5rem;">
+          <a href="https://wa.me/50493017653" target="_blank" style="color: var(--color-dorado); text-decoration: none; font-weight: bold;">
+            💬 WhatsApp: 9301-7653
+          </a>
+        </p>
       </div>
-
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Perfumes Lara. Todos los derechos reservados.</p>
+      <p>&copy; 2026 Perfumes Lara. Todos los derechos reservados.</p>
     </div>
   </footer>
-</body>
-</html>

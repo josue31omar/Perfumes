@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-primario: #8B5E83;   /* morado elegante */
+  --color-primario: #8B5E83; /* morado elegante */
   --color-dorado: #C9A96E;
   --color-oscuro: #1a1a2e;
   --color-claro: #f9f5f0;
@@ -19,29 +19,44 @@ body {
   color: var(--color-oscuro);
 }
 
-/* NAVBAR */
+/* NAVBAR CON CENTRADO ABSOLUTO */
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--color-oscuro);
   color: white;
+  position: relative; 
 }
 
-.nav-links {
-  list-style: none;
+.logo {
+  flex: 1;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
   justify-content: center;
 }
 
 .nav-acciones {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 1rem;
   justify-content: flex-end;
 }
+
+.navbar nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .logo {
   display: flex;
@@ -78,19 +93,12 @@ body {
   letter-spacing: 4px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
 .nav-links a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
   font-size: 1.2rem;
 }
-
 
 .nav-links a:hover {
   color: var(--color-dorado);
@@ -124,6 +132,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: transform 0.2s;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -159,12 +168,14 @@ body {
 }
 
 .filtro-btn {
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border: 2px solid var(--color-primario);
   background: transparent;
+  color: var(--color-primario);
   border-radius: 20px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: bold;
   transition: all 0.3s;
 }
 
@@ -172,6 +183,17 @@ body {
 .filtro-btn.activo {
   background-color: var(--color-primario);
   color: white;
+}
+
+body.dark .filtro-btn {
+  border-color: var(--color-dorado);
+  color: var(--color-dorado);
+}
+
+body.dark .filtro-btn:hover,
+body.dark .filtro-btn.activo {
+  background-color: var(--color-dorado);
+  color: var(--color-oscuro);
 }
 
 /* PRODUCTOS */
@@ -196,9 +218,13 @@ body {
   transform: translateY(-5px);
 }
 
-.card-img {
-  font-size: 4rem;
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* Mantiene la botella completa dentro del espacio */
+  border-radius: 10px;
   margin-bottom: 1rem;
+  background-color: transparent;
 }
 
 .card h3 {
@@ -259,8 +285,8 @@ body {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 998;
 }
-
 
 /* CONTACTO CONTENIDO */
 .contacto-contenido {
@@ -396,21 +422,7 @@ body {
   background-color: var(--color-dorado);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contacto-contenido {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
-  }
-}
-
-/* NAVBAR ACCIONES */
-.nav-acciones {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
+/* BOTONES NAVBAR */
 .btn-dark {
   background: transparent;
   border: 2px solid var(--color-dorado);
@@ -427,7 +439,6 @@ body {
   color: var(--color-oscuro);
 }
 
-/* HAMBURGER */
 .hamburger {
   display: none;
   background: transparent;
@@ -435,55 +446,6 @@ body {
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-/* MODO OSCURO */
-body.dark {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-body.dark .navbar {
-  background-color: #1f1f1f;
-}
-
-body.dark .card {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-body.dark .card p {
-  color: #aaa;
-}
-
-body.dark .formulario-box {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-body.dark .campo input,
-body.dark .campo select,
-body.dark .campo textarea {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-  border-color: #444;
-}
-
-body.dark .footer {
-  background-color: #0a0a0a;
-}
-
-body.dark .info-box {
-  color: #f0f0f0;
-}
-
-/* CARD IMAGEN */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
 /* WHATSAPP FLOTANTE */
@@ -549,22 +511,6 @@ body.dark .info-box {
   color: var(--color-dorado);
 }
 
-.footer-redes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-redes a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-redes a:hover {
-  color: var(--color-dorado);
-}
-
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #333;
@@ -574,13 +520,7 @@ body.dark .info-box {
 }
 
 /* RESPONSIVE NAVBAR */
-/* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
-  .navbar {
-    grid-template-columns: 1fr auto;
-    padding: 0.8rem 1rem;
-  }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -599,10 +539,6 @@ body.dark .info-box {
 
   .hamburger {
     display: block;
-  }
-
-  .nav-acciones {
-    display: none; /* Oculta la luna en móvil, ya que el hamburger la reemplaza */
   }
 }
 
@@ -623,11 +559,6 @@ body.dark .info-box {
 
 .carrito-panel.abierto {
   right: 0;
-}
-
-body.dark .carrito-panel {
-  background: #1e1e1e;
-  color: #f0f0f0;
 }
 
 .carrito-header {
@@ -664,17 +595,12 @@ body.dark .carrito-panel {
   margin-top: 2rem;
 }
 
-/* ITEM DEL CARRITO */
 .carrito-item {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid #eee;
-}
-
-body.dark .carrito-item {
-  border-bottom: 1px solid #333;
 }
 
 .carrito-item img {
@@ -712,14 +638,9 @@ body.dark .carrito-item {
   transform: scale(1.2);
 }
 
-/* FOOTER CARRITO */
 .carrito-footer {
   padding: 1.5rem;
   border-top: 2px solid #eee;
-}
-
-body.dark .carrito-footer {
-  border-top: 2px solid #333;
 }
 
 .carrito-total {
@@ -729,10 +650,6 @@ body.dark .carrito-footer {
   font-weight: bold;
   margin-bottom: 1rem;
   color: var(--color-oscuro);
-}
-
-body.dark .carrito-total {
-  color: #f0f0f0;
 }
 
 #carrito-total {
@@ -772,54 +689,206 @@ body.dark .carrito-total {
   display: block;
 }
 
-/* BUSCADOR */
-.buscador {
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem 2rem;
+/* MODO OSCURO GLOBAL */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-#buscador-input {
-  width: 100%;
-  max-width: 500px;
-  padding: 0.8rem 1.5rem;
-  border: 2px solid #ddd;
-  border-radius: 30px;
-  font-size: 1rem;
-  outline: none;
-  transition: border 0.3s;
-  font-family: var(--fuente);
+body.dark .navbar {
+  background-color: #1f1f1f;
 }
 
-#buscador-input:focus {
-  border-color: var(--color-primario);
+body.dark .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
 }
 
-body.dark #buscador-input {
+body.dark .card h3 {
+  color: #f0f0f0;
+}
+
+body.dark .card p {
+  color: #aaa;
+}
+
+body.dark .formulario-box {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .campo input,
+body.dark .campo select,
+body.dark .campo textarea {
   background-color: #2a2a2a;
   color: #f0f0f0;
   border-color: #444;
 }
 
-/* NAVBAR RESPONSIVE */
-@media (max-width: 900px) {
-  .logo-nombre {
-    font-size: 18px;
-  }
+body.dark .footer {
+  background-color: #0a0a0a;
+}
 
-  .logo-subtitulo {
-    font-size: 7px;
-  }
+body.dark .info-box {
+  color: #f0f0f0;
+}
 
-  .logo-linea-decorativa {
-    width: 20px;
+body.dark .carrito-panel {
+  background: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .carrito-item {
+  border-bottom: 1px solid #333;
+}
+
+body.dark .carrito-footer {
+  border-top: 2px solid #333;
+}
+
+body.dark .carrito-total {
+  color: #f0f0f0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
   }
 
   .nav-links {
-    gap: 1rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-oscuro);
+    padding: 1rem 2rem;
+    z-index: 999;
   }
 
-  .nav-links a {
-    font-size: 1rem;
+  .nav-links.activo {
+    display: flex;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+/* ==========================================
+   ESTILOS FINALES PARA EL CARRUSEL AUTOMÁTICO
+   ========================================== */
+.banner-slider {
+  width: 100%;
+  max-width: 1100px;
+  height: 400px;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+}
+
+.slider-container {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  animation: desplazarSlider 20s infinite linear;
+}
+
+.slide {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Fondo difuminado automático que llena los laterales */
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(25px) brightness(0.4);
+  z-index: 1;
+}
+
+/* Imagen principal completa al frente */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: var(--color-dorado);
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Animación de desplazamiento automático continuo */
+@keyframes desplazarSlider {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(0); }
+  20%  { transform: translateX(-20%); }
+  35%  { transform: translateX(-20%); }
+  40%  { transform: translateX(-40%); }
+  55%  { transform: translateX(-40%); }
+  60%  { transform: translateX(-60%); }
+  75%  { transform: translateX(-60%); }
+  80%  { transform: translateX(-80%); }
+  95%  { transform: translateX(-80%); }
+  100% { transform: translateX(0); }
+}
+
+.catalogo-filtros-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+#buscador-input {
+  width: 100%;
+  max-width: 450px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  border: 1px solid var(--color-dorado, #d4af37);
+  background-color: var(--color-input-bg, #fff);
+  font-size: 1rem;
+  outline: none;
 }
