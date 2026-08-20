@@ -1,3 +1,8 @@
+// Formatea un número como "3,800.00" (con coma de miles y 2 decimales)
+function formatearPrecio(numero) {
+  return numero.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── MODO OSCURO ──
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── MENÚ HAMBURGUESA ──
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.querySelector('.nav-links');
-  if (hamburger) {
+  if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('activo');
     });
@@ -56,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnFinalizar = document.getElementById('btn-finalizar');
   const carritoFlotante = document.querySelector('.carrito-flotante');
 
-  // Abrir carrito al hacer clic en el flotante
   if (carritoFlotante) {
     carritoFlotante.addEventListener('click', () => {
       carritoPanel.classList.add('abierto');
@@ -64,55 +68,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Cerrar carrito
-  if (cerrarCarrito) {
-    cerrarCarrito.addEventListener('click', cerrar);
-  }
-  if (overlay) {
-    overlay.addEventListener('click', cerrar);
-  }
+  if (cerrarCarrito) cerrarCarrito.addEventListener('click', cerrar);
+  if (overlay) overlay.addEventListener('click', cerrar);
 
   function cerrar() {
     carritoPanel.classList.remove('abierto');
     overlay.classList.remove('activo');
   }
 
-  // Agregar producto al carrito
   const botonesAgregar = document.querySelectorAll('.btn-agregar');
-  if (botonesAgregar.length > 0) {
-    botonesAgregar.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.card');
-        const nombre = card.querySelector('h3').textContent;
-        const precio = parseFloat(card.querySelector('.precio').textContent.replace('$', ''));
-        const imagen = card.querySelector('img') ? card.querySelector('img').src : '';
+  botonesAgregar.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.card');
+      const nombre = card.querySelector('h3').textContent;
+      const precio = parseFloat(
+        card.querySelector('.precio').textContent
+          .replace('L.', '')
+          .replace(/,/g, '')
+          .trim()
+      );
+      const imagen = card.querySelector('img') ? card.querySelector('img').src : '';
 
-        // Verificar si ya está en el carrito
-        const existe = carrito.find(p => p.nombre === nombre);
-        if (existe) {
-          existe.cantidad++;
-        } else {
-          carrito.push({ nombre, precio, imagen, cantidad: 1 });
-        }
+      const existe = carrito.find(p => p.nombre === nombre);
+      if (existe) {
+        existe.cantidad++;
+      } else {
+        carrito.push({ nombre, precio, imagen, cantidad: 1 });
+      }
 
-        actualizarCarrito();
-
-        btn.textContent = '✅ Agregado';
-        setTimeout(() => {
-          btn.textContent = 'Agregar al carrito';
-        }, 1500);
-      });
+      actualizarCarrito();
+      btn.textContent = '✅ Agregado';
+      setTimeout(() => { btn.textContent = 'Agregar al carrito'; }, 1500);
     });
-  }
+  });
 
   function actualizarCarrito() {
     if (!carritoItems) return;
-
-    // Actualizar contador
     const total = carrito.reduce((sum, p) => sum + p.cantidad, 0);
     if (contadorEl) contadorEl.textContent = total;
 
-    // Actualizar lista
     if (carrito.length === 0) {
       carritoItems.innerHTML = '<p class="carrito-vacio">Tu carrito está vacío</p>';
     } else {
@@ -121,44 +115,31 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="${p.imagen}" alt="${p.nombre}">
           <div class="carrito-item-info">
             <h4>${p.nombre}</h4>
-            <p>$${p.precio.toFixed(2)} x ${p.cantidad}</p>
+            <p>L. ${formatearPrecio(p.precio)} x ${p.cantidad}</p>
           </div>
           <button class="carrito-item-eliminar" data-index="${i}">🗑️</button>
         </div>
       `).join('');
 
-      // Botones eliminar
       document.querySelectorAll('.carrito-item-eliminar').forEach(btn => {
         btn.addEventListener('click', () => {
-          const index = parseInt(btn.dataset.index);
-          carrito.splice(index, 1);
+          carrito.splice(parseInt(btn.dataset.index), 1);
           actualizarCarrito();
         });
       });
     }
-
-    // Actualizar total
     const totalPrecio = carrito.reduce((sum, p) => sum + p.precio * p.cantidad, 0);
-    if (carritoTotal) carritoTotal.textContent = `$${totalPrecio.toFixed(2)}`;
+    if (carritoTotal) carritoTotal.textContent = `L. ${formatearPrecio(totalPrecio)}`;
   }
 
-  // Finalizar compra por WhatsApp
   if (btnFinalizar) {
     btnFinalizar.addEventListener('click', () => {
-      if (carrito.length === 0) {
-        alert('⚠️ Tu carrito está vacío');
-        return;
-      }
-
+      if (carrito.length === 0) return alert('⚠️ Tu carrito está vacío');
       let mensaje = '🛒 *Hola, quiero hacer un pedido:*\n\n';
-      carrito.forEach(p => {
-        mensaje += `• ${p.nombre} x${p.cantidad} - $${(p.precio * p.cantidad).toFixed(2)}\n`;
-      });
+      carrito.forEach(p => mensaje += `• ${p.nombre} x${p.cantidad} - L. ${formatearPrecio(p.precio * p.cantidad)}\n`);
       const total = carrito.reduce((sum, p) => sum + p.precio * p.cantidad, 0);
-      mensaje += `\n💰 *Total: $${total.toFixed(2)}*`;
-
-      const url = `https://wa.me/50493017653?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
+      mensaje += `\n💰 *Total: L. ${formatearPrecio(total)}*`;
+      window.open(`https://wa.me/50493017653?text=${encodeURIComponent(mensaje)}`, '_blank');
     });
   }
 
@@ -184,7 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         document.getElementById('nombre').value = '';
         document.getElementById('email').value = '';
-        document.getElementById('asunto').value = '';
+        const asunto = document.getElementById('asunto');
+        if (asunto) asunto.value = '';
         document.getElementById('mensaje').value = '';
         mensajeExito.style.display = 'none';
         btnEnviar.textContent = 'Enviar mensaje';
@@ -195,25 +177,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── BUSCADOR ──
   const buscadorInput = document.getElementById('buscador-input');
-
   if (buscadorInput) {
     buscadorInput.addEventListener('input', () => {
       const texto = buscadorInput.value.toLowerCase().trim();
-
       cards.forEach(card => {
         const nombre = card.querySelector('h3').textContent.toLowerCase();
         const descripcion = card.querySelector('p').textContent.toLowerCase();
-
-        if (nombre.includes(texto) || descripcion.includes(texto)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = (nombre.includes(texto) || descripcion.includes(texto)) ? 'block' : 'none';
       });
-
-      // Resetear filtros al buscar
       botones.forEach(b => b.classList.remove('activo'));
-      document.querySelector('[data-filtro="todos"]').classList.add('activo');
+      const fT = document.querySelector('[data-filtro="todos"]');
+      if (fT) fT.classList.add('activo');
     });
   }
 
@@ -221,17 +195,32 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach(card => {
     if (card.dataset.agotado === 'true') {
       card.classList.add('agotado');
-
-      // Agregar etiqueta agotado
       const etiqueta = document.createElement('span');
       etiqueta.classList.add('etiqueta-agotado');
       etiqueta.textContent = '🚫 Agotado';
-
-      // Insertarla antes del botón
       const btn = card.querySelector('.btn-agregar');
-      btn.textContent = 'No disponible';
-      card.insertBefore(etiqueta, btn);
+      if (btn) {
+        btn.textContent = 'No disponible';
+        card.insertBefore(etiqueta, btn);
+      }
     }
-  });
-  
-});
+  });     
+
+  // ── CARRUSEL DESLIZANTE AUTOMÁTICO (DINÁMICO) ──
+  const sliderContainer = document.getElementById('sliderContainer');
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  if (sliderContainer && slides.length > 0) {
+    // Ajustamos dinámicamente el ancho del contenedor según la cantidad de imágenes
+    sliderContainer.style.width = `${slides.length * 100}%`;
+    slides.forEach(slide => {
+      slide.style.width = `${100 / slides.length}%`;
+    });
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      const porcentaje = currentSlide * (100 / slides.length);
+      sliderContainer.style.transform = `translateX(-${porcentaje}%)`;
+    }, 3500);
+  }
