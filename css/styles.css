@@ -19,7 +19,7 @@ body {
   color: var(--color-oscuro);
 }
 
-/* NAVBAR CON CENTRADO ABSOLUTO */
+/* --- NAVBAR CON CENTRADO ABSOLUTO --- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -27,56 +27,15 @@ body {
   padding: 1rem 2rem;
   background-color: var(--color-oscuro);
   color: white;
-
   position: relative; /* Clave para posicionar el menú respecto a esta barra */
 }
-
-.navbar nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Lo empuja exactamente al centro matemático de la barra */
-
-  position: relative; 
-
-}
-
-.logo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.nav-acciones {
-  flex: 1;
-  display: flex;
-
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-end;
-
-}
-
-.navbar nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 
 .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   line-height: 1.2;
+  flex: 1;
 }
 
 .logo-nombre {
@@ -107,6 +66,21 @@ body {
   letter-spacing: 4px;
 }
 
+/* Menú centrado de forma absoluta */
+.navbar nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Lo empuja exactamente al centro matemático de la barra */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -116,6 +90,36 @@ body {
 
 .nav-links a:hover {
   color: var(--color-dorado);
+}
+
+/* Acciones a la derecha (incluye el botón de la luna) */
+.nav-acciones {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;  
+  justify-content: flex-end;
+}
+
+/* Estilo del botón de modo oscuro (la luna) */
+#btn-dark {
+  background: transparent;
+  border: 1px solid var(--color-dorado);
+  color: var(--color-dorado);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+#btn-dark:hover {
+  background-color: var(--color-dorado);
+  color: white;
 }
 
 /* HERO */

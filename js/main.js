@@ -29,24 +29,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── FILTROS DEL CATÁLOGO ──
+  // ── FILTRADO Y BÚSQUEDA (CATÁLOGO) ──
   const botones = document.querySelectorAll('.filtro-btn');
   const cards = document.querySelectorAll('.card');
+  const buscadorInput = document.getElementById('buscador-input');
 
+  let categoriaActual = 'todos';
+
+  function aplicarFiltros() {
+    const texto = buscadorInput ? buscadorInput.value.toLowerCase().trim() : '';
+
+    cards.forEach(card => {
+      const categoria = card.dataset.categoria;
+      const h3El = card.querySelector('h3');
+      const pEl = card.querySelector('p');
+      
+      const nombre = h3El ? h3El.textContent.toLowerCase() : '';
+      const descripcion = pEl ? pEl.textContent.toLowerCase() : '';
+
+      const coincideCategoria = (categoriaActual === 'todos' || categoria === categoriaActual);
+      const coincideTexto = (nombre.includes(texto) || descripcion.includes(texto));
+
+      if (coincideCategoria && coincideTexto) {
+        card.style.display = 'block'; 
+      } else {
+        card.style.display = 'none'; 
+      }
+    });
+  }
+
+  // Eventos para los botones de categoría (Todos, Mujer, Hombre, Unisex)
   if (botones.length > 0) {
     botones.forEach(btn => {
       btn.addEventListener('click', () => {
         botones.forEach(b => b.classList.remove('activo'));
         btn.classList.add('activo');
-        const filtro = btn.dataset.filtro;
-        cards.forEach(card => {
-          if (filtro === 'todos' || card.dataset.categoria === filtro) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        categoriaActual = btn.dataset.filtro;
+        aplicarFiltros();
       });
+    });
+  }
+
+  // Evento para la barra de búsqueda en tiempo real
+  if (buscadorInput) {
+    buscadorInput.addEventListener('input', () => {
+      aplicarFiltros();
     });
   }
 
@@ -80,6 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
   botonesAgregar.forEach(btn => {
     btn.addEventListener('click', () => {
       const card = btn.closest('.card');
+      if (card.dataset.agotado === 'true') return;
+
       const nombre = card.querySelector('h3').textContent;
       const precio = parseFloat(
         card.querySelector('.precio').textContent
@@ -175,22 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── BUSCADOR ──
-  const buscadorInput = document.getElementById('buscador-input');
-  if (buscadorInput) {
-    buscadorInput.addEventListener('input', () => {
-      const texto = buscadorInput.value.toLowerCase().trim();
-      cards.forEach(card => {
-        const nombre = card.querySelector('h3').textContent.toLowerCase();
-        const descripcion = card.querySelector('p').textContent.toLowerCase();
-        card.style.display = (nombre.includes(texto) || descripcion.includes(texto)) ? 'block' : 'none';
-      });
-      botones.forEach(b => b.classList.remove('activo'));
-      const fT = document.querySelector('[data-filtro="todos"]');
-      if (fT) fT.classList.add('activo');
-    });
-  }
-
   // ── PRODUCTOS AGOTADOS ──
   cards.forEach(card => {
     if (card.dataset.agotado === 'true') {
@@ -201,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const btn = card.querySelector('.btn-agregar');
       if (btn) {
         btn.textContent = 'No disponible';
+        btn.disabled = true;
         card.insertBefore(etiqueta, btn);
       }
     }
@@ -212,7 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentSlide = 0;
 
   if (sliderContainer && slides.length > 0) {
-    // Ajustamos dinámicamente el ancho del contenedor según la cantidad de imágenes
     sliderContainer.style.width = `${slides.length * 100}%`;
     slides.forEach(slide => {
       slide.style.width = `${100 / slides.length}%`;
@@ -224,3 +237,4 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderContainer.style.transform = `translateX(-${porcentaje}%)`;
     }, 3500);
   }
+});
